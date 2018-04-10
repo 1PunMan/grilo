@@ -1177,7 +1177,7 @@ grl_registry_load_plugin (GrlRegistry *registry,
     return FALSE;
 
   return register_keys_plugin (registry, plugin, error) &&
-	 activate_plugin (resitry, plugin, error);
+	 activate_plugin (registry, plugin, error);
 }
 
 /**
