@@ -669,6 +669,26 @@ grl_metadata_key_setup_system_keys (GrlRegistry *registry)
                                              GRL_METADATA_KEY_ALBUM_DISC_NUMBER,
                                              GRL_METADATA_KEY_URL,
                                              NULL);
+
+  grl_registry_register_metadata_key_system (registry,
+                                             g_param_spec_int ("developer",
+                                                               "developer",
+                                                               "Developer of the game",
+                                                               NULL,
+                                                               G_PARAM_STATIC_STRINGS | G_PARAM_READWRITE),
+                                             GRL_METADATA_KEY_DEVELOPER,
+                                             GRL_METADATA_KEY_INVALID,
+                                             NULL);
+
+  grl_registry_register_metadata_key_system (registry,
+                                             g_param_spec_int ("publisher",
+                                                               "publisher",
+                                                               "Publisher of the game",
+                                                               NULL,
+                                                               G_PARAM_STATIC_STRINGS | G_PARAM_READWRITE),
+                                             GRL_METADATA_KEY_PUBLISHER,
+                                             GRL_METADATA_KEY_INVALID,
+                                             NULL);
 }
 
 /**
