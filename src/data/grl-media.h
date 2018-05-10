@@ -233,6 +233,10 @@ void grl_media_set_orientation (GrlMedia *media, gint orientation);
 
 void grl_media_set_childcount (GrlMedia *media, gint childcount);
 
+void grl_media_set_developer (GrlMedia *media, const gchar *developer);
+
+void grl_media_set_publisher (GrlMedia *media, const gchar *publisher);
+
 void grl_media_add_url_data (GrlMedia *media, const gchar *url, const gchar *mime, gint bitrate, gfloat framerate, gint width, gint height);
 
 void grl_media_add_author (GrlMedia *media, const gchar *author);
