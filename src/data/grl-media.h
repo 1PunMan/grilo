@@ -452,6 +452,10 @@ gchar *grl_media_serialize_extended (GrlMedia *media,
 
 GrlMedia *grl_media_unserialize (const gchar *serial);
 
+const gchar *grl_media_get_developer (GrlMedia *media);
+
+const gchar *grl_media_get_publisher (GrlMedia *media);
+
 G_END_DECLS
 
 #endif /* _GRL_MEDIA_H_ */
