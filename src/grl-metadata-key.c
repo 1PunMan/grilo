@@ -689,6 +689,7 @@ grl_metadata_key_setup_system_keys (GrlRegistry *registry)
                                              GRL_METADATA_KEY_PUBLISHER,
                                              GRL_METADATA_KEY_INVALID,
                                              NULL);
+}
 
 /**
  * grl_metadata_key_get_name:
