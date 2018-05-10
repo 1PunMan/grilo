@@ -1998,6 +1998,44 @@ grl_media_set_director (GrlMedia *media,
 }
 
 /**
+ * grl_media_set_developer:
+ * @media: the media
+ * @description: the developer
+ *
+ * Set the media's developer
+ *
+ * Since: 0.1.4
+ */
+void
+grl_media_set_developer (GrlMedia *media, const gchar *developer)
+{
+  g_return_if_fail (GRL_IS_MEDIA (media));
+
+  grl_data_set_string (GRL_DATA (media),
+                       GRL_METADATA_KEY_DEVELOPER,
+                       developer);
+}
+
+/**
+ * grl_media_set_publisher:
+ * @media: the media
+ * @description: the publisher
+ *
+ * Set the media's publisher
+ *
+ * Since: 0.1.4
+ */
+void
+grl_media_set_publisher (GrlMedia *media, const gchar *publisher)
+{
+  g_return_if_fail (GRL_IS_MEDIA (media));
+
+  grl_data_set_string (GRL_DATA (media),
+                       GRL_METADATA_KEY_PUBLISHER,
+                       publisher);
+}
+
+/**
  * grl_media_set_original_title:
  * @media: a #GrlMedia
  * @original_title: original, untranslated title of the movie
