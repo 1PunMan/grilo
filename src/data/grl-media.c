@@ -3677,3 +3677,35 @@ grl_media_get_childcount (GrlMedia *media)
     return GRL_METADATA_KEY_CHILDCOUNT_UNKNOWN;
   }
 }
+
+/**
+ * grl_media_get_developer:
+ * @media: the media object
+ *
+ * Returns: the media's developer
+ *
+ * Since: 0.1.4
+ */
+const gchar *
+grl_media_get_developer (GrlMedia *media)
+{
+  g_return_val_if_fail (GRL_IS_MEDIA (media), NULL);
+
+  return grl_data_get_string (GRL_DATA (media), GRL_METADATA_KEY_DEVELOPER);
+}
+
+/**
+ * grl_media_get_publisher:
+ * @media: the media object
+ *
+ * Returns: the media's publisher
+ *
+ * Since: 0.1.4
+ */
+const gchar *
+grl_media_get_publisher (GrlMedia *media)
+{
+  g_return_val_if_fail (GRL_IS_MEDIA (media), NULL);
+
+  return grl_data_get_string (GRL_DATA (media), GRL_METADATA_KEY_PUBLISHER);
+}
