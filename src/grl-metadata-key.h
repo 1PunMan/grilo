@@ -127,6 +127,7 @@ typedef enum {
 #define GRL_METADATA_KEY_ALBUM_ARTIST         60
 #define GRL_METADATA_KEY_DEVELOPER            61
 #define GRL_METADATA_KEY_PUBLISHER            62
+#define GRL_METADATA_KEY_COOPERATIVE          63
 
 /* END CORE KEYS */
 

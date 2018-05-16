@@ -117,6 +117,8 @@ namespace Grl {
 		public static Grl.KeyID DEVELOPER;
 		[CCode (cname ="GRL_METADATA_KEY_PUBLISHER")]
 		public static Grl.KeyID PUBLISHER;
+		[CCode (cname ="GRL_METADATA_KEY_COOPERATIVE")]
+		public static Grl.KeyID COOPERATIVE;
 
 		[CCode (cname ="GRL_METADATA_KEY_CHILDCOUNT_UNKNOWN")]
 		public static uint CHILDCOUNT_UNKNOWN;
