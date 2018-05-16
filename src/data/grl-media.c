@@ -1552,6 +1552,25 @@ grl_media_set_favourite (GrlMedia *media, gboolean favourite)
 }
 
 /**
+ * grl_media_set_cooperative:
+ * @media: a media
+ * @favourite: whether the game is Co-op or not
+ *
+ * Set if the game is Co-op or not
+ *
+ * Since: 0.2.3
+ */
+void
+grl_media_set_cooperative (GrlMedia *media, gboolean cooperative)
+{
+  g_return_if_fail (GRL_IS_MEDIA (media));
+
+  grl_data_set_boolean (GRL_DATA (media),
+                        GRL_METADATA_KEY_COOPERATIVE,
+                        cooperative);
+}
+
+/**
  * grl_media_set_keyword:
  * @media: a #GrlMedia
  * @keyword: a keyword describing the media
@@ -2928,6 +2947,22 @@ grl_media_get_favourite (GrlMedia *media)
   g_return_val_if_fail (GRL_IS_MEDIA (media), FALSE);
 
   return grl_data_get_boolean (GRL_DATA (media), GRL_METADATA_KEY_FAVOURITE);
+}
+
+/**
+ * grl_media_get_cooperative:
+ * @media: the media object
+ *
+ * Returns: whether the game is Co-op or not
+ *
+ * Since: 0.2.3
+ */
+gboolean
+grl_media_get_cooperative (GrlMedia *media)
+{
+  g_return_val_if_fail (GRL_IS_MEDIA (media), FALSE);
+
+  return grl_data_get_boolean (GRL_DATA (media), GRL_METADATA_KEY_COOPERATIVE);
 }
 
 /**

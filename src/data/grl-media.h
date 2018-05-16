@@ -169,6 +169,8 @@ void grl_media_set_url_data (GrlMedia *media, const gchar *url, const gchar *mim
 
 void grl_media_set_favourite (GrlMedia *media, gboolean favourite);
 
+void grl_media_set_cooperative (GrlMedia *media, gboolean cooperative);
+
 void grl_media_set_keyword (GrlMedia *media, const gchar *keyword);
 
 void grl_media_set_size (GrlMedia *media, gint64 size);
@@ -339,6 +341,8 @@ const gchar *grl_media_get_license (GrlMedia *media);
 gfloat grl_media_get_start_time (GrlMedia *media);
 
 gboolean grl_media_get_favourite (GrlMedia *media);
+
+gboolean grl_media_get_cooperative (GrlMedia *media);
 
 const gchar *grl_media_get_keyword (GrlMedia *media);
 
