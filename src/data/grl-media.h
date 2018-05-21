@@ -126,6 +126,8 @@ void grl_media_set_developer (GrlMedia *media, const gchar *developer);
 
 void grl_media_set_publisher (GrlMedia *media, const gchar *publisher);
 
+void grl_media_set_cooperative (GrlMedia *media, gboolean cooperative);
+
 void grl_media_set_duration (GrlMedia *media, gint duration);
 
 void grl_media_set_publication_date (GrlMedia *media, const GDateTime *date);
@@ -296,6 +298,8 @@ const gchar *grl_media_get_site (GrlMedia *media);
 const gchar *grl_media_get_developer (GrlMedia *media);
 
 const gchar *grl_media_get_publisher (GrlMedia *media);
+
+gboolean grl_media_get_cooperative (GrlMedia *media);
 
 gint grl_media_get_duration (GrlMedia *media);
 

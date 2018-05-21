@@ -1231,6 +1231,25 @@ grl_media_set_publisher (GrlMedia *media, const gchar *publisher)
 }
 
 /**
+ * grl_media_set_cooperative:
+ * @media: a media
+ * @favourite: whether the game is Co-op or not
+ *
+ * Set if the game is Co-op or not
+ *
+ * Since: 0.3.4
+ */
+void
+grl_media_set_cooperative (GrlMedia *media, gboolean cooperative)
+{
+  g_return_if_fail (GRL_IS_MEDIA (media));
+
+  grl_data_set_boolean (GRL_DATA (media),
+                        GRL_METADATA_KEY_COOPERATIVE,
+                        cooperative);
+}
+
+/**
  * grl_media_set_duration:
  * @media: the media
  * @duration: the duration in seconds
@@ -2531,6 +2550,22 @@ grl_media_get_publisher (GrlMedia *media)
   g_return_val_if_fail (GRL_IS_MEDIA (media), NULL);
 
   return grl_data_get_string (GRL_DATA (media), GRL_METADATA_KEY_PUBLISHER);
+}
+
+/**
+ * grl_media_get_cooperative:
+ * @media: the media object
+ *
+ * Returns: whether the game is Co-op or not
+ *
+ * Since: 0.3.4
+ */
+gboolean
+grl_media_get_cooperative (GrlMedia *media)
+{
+  g_return_val_if_fail (GRL_IS_MEDIA (media), FALSE);
+
+  return grl_data_get_boolean (GRL_DATA (media), GRL_METADATA_KEY_COOPERATIVE);
 }
 
 /**

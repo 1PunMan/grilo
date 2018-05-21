@@ -689,6 +689,16 @@ grl_metadata_key_setup_system_keys (GrlRegistry *registry)
                                              GRL_METADATA_KEY_PUBLISHER,
                                              GRL_METADATA_KEY_INVALID,
                                              NULL);
+
+  grl_registry_register_metadata_key_system (registry,
+                                             g_param_spec_boolean ("cooperative",
+                                                                   "Co-op",
+                                                                   "Whether or not the game was marked as Co-op",
+                                                                   FALSE,
+                                                                   G_PARAM_STATIC_STRINGS | G_PARAM_READWRITE),
+                                             GRL_METADATA_KEY_COOPERATIVE,
+                                             GRL_METADATA_KEY_INVALID,
+                                             NULL);
 }
 
 /**
